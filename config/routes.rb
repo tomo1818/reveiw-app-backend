@@ -6,7 +6,9 @@ Rails.application.routes.draw do
       resources :categories do
         get 'get_category'
       end
-      resources :reviews
+      resources :reviews do
+        get 'get_review'
+      end
 
       mount_devise_token_auth_for 'User', at: 'auth', controllers: {
         registrations: 'api/v1/auth/registrations'
