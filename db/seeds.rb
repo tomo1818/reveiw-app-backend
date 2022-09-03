@@ -29,7 +29,18 @@ user3.groups << group3
 user3.groups << group1
 user3.save
 
-Category.create!(name: 'Category1', group: group1)
-Category.create!(name: 'Category2', group: group2)
-Category.create!(name: 'Category3', group: group1)
-Category.create!(name: 'Category4', group: group1)
+
+# カテゴリーを作成
+category1 = Category.create!(name: 'Category1', group: group1)
+category2 = Category.create!(name: 'Category2', group: group2)
+category3 = Category.create!(name: 'Category3', group: group1)
+category4 = Category.create!(name: 'Category4', group: group1)
+
+# レビューを作成
+review1 = Review.create!(title: 'Review1', category: category1, evaluation: 5, done: false, visit_day: 'Sat, 03 Sep 2022')
+review2 = Review.create!(title: 'Review2', category: category1, evaluation: 5, done: false, visit_day: 'Sat, 03 Sep 2022')
+review3 = Review.create!(title: 'Review3', category: category2, evaluation: 5, done: false, visit_day: 'Sat, 03 Sep 2022')
+review4 = Review.create!(title: 'Review4', category: category2, evaluation: 5, done: false, visit_day: 'Sat, 03 Sep 2022')
+review5 = Review.create!(title: 'Review5', category: category3, evaluation: 5, done: false, visit_day: 'Sat, 03 Sep 2022')
+review6 = Review.create!(title: 'Review6', category: category4, evaluation: 5, done: false, visit_day: 'Sat, 03 Sep 2022')
+review7 = Review.create!(title: 'Review7', category: category1, evaluation: 5, done: false, visit_day: 'Sat, 03 Sep 2022')
